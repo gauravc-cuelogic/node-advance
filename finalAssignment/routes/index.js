@@ -21,4 +21,15 @@ router.post('/register', function(req, res, next) {
   
 });
 
+router.post('/login', function(req, res, next) {
+  var response = UserController.login(req.body).then(function(response){
+    console.log("route resp",response);
+    res.json(response);
+  })
+  .catch(function(error){
+    console.log("route error",error);
+    res.json(error);
+  });
+});
+
 module.exports = router;
