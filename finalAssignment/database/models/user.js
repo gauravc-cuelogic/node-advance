@@ -20,16 +20,13 @@ UserModel.registerUser = function(payload) {
       NewUser.save()
       .then(function(response) {
         resolve(response);
-        console.log("model resp", response);
       })
       .catch(function(error) {
-        console.log("model error", error);
-        reject(error);
+        reject("User Already Exist");
       });
     })
     .catch(function(error) {
-      reject(error);
-      console.log("model error", error);
+      reject("User Already Exist"); 
     });
   });
 };
@@ -39,7 +36,6 @@ UserModel.loginUser = function(payload) {
   return new Promise(function (resolve, reject){
     UserModel.searchUser({"username" : payload.username})
     .then(function (userResult) {
-      console.log(userResult,'userResult');
       common.decryptPassword(payload.password, userResult.password)
       .then(function(encryptedPassword) {
         resolve(encryptedPassword);
