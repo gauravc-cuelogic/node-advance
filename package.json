@@ -1,0 +1,30 @@
+{
+  "name": "node-advance",
+  "version": "1.0.0",
+  "description": "Nodejs Advance Training",
+  "main": "index.js",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.5",
+    "globby": "^6.1.0",
+    "mongoose": "^4.8.2",
+    "node-schedule": "^1.2.0",
+    "save": "^2.3.0",
+    "socket.io": "^1.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gauravc-cuelogic/node-advance.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gauravc-cuelogic/node-advance/issues"
+  },
+  "homepage": "https://github.com/gauravc-cuelogic/node-advance#readme"
+}
